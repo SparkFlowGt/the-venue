@@ -23,21 +23,27 @@ const TimeUntil = ()=>{
     </div>
     )
     
-    const getTimeUntil= (deadline) =>{
+    const getTimeUntil = useCallback( (deadline) => {
         const time = Date.parse(deadline) - Date.parse(new Date());
-        if(time<0){
+        if(time < 0){
             console.log('Date passed')
-        }else{
+        } else{
             const seconds = Math.floor((time/1000)%60);
             const minutes = Math.floor((time/1000/60)%60);
             const hours = Math.floor((time/(1000*60*60))%24);
             const days = Math.floor((time/(1000*60*60*24)));
 
-            console.log(minutes);
-        }
-    }
+            setTime({
+                days,
+                hours,
+                minutes,
+                seconds
+            })
+        }  
+    },[])
+
     useEffect(()=>{
-        setInterval(()=>getTimeUntil(' 20 Aug 2023 01:20.00 GMT'),1000) 
+        setInterval(()=>getTimeUntil('  20 Aug 2024, 01:20:00 GMT '),1000) 
     },[getTimeUntil])
     
     return(
@@ -48,10 +54,10 @@ const TimeUntil = ()=>{
                 </div>
                 <div className="countdown_bottom">
   
-                    {renderItem(27,'Days')}
-                    {renderItem(4,'hours')}
-                    {renderItem(3,'minutes')}
-                    {renderItem(3,'Sec')}
+                    {renderItem(time.days,'Days')}
+                    {renderItem(time.hours,'hours')}
+                    {renderItem(time.minutes,'minutes')}
+                    {renderItem(time.seconds,'Seconds')}
 
 
                 </div>

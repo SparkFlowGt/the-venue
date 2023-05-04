@@ -15,7 +15,7 @@ const App=()=> {
   return (
     <div className="App">
       <Header/>
-      
+
       <Element name="featured">
         <Featured/>
       </Element>
@@ -23,12 +23,15 @@ const App=()=> {
       <Element name="venuenfo">
         <VenueNfo/>
       </Element>
+
       <Element name="highlights">
         <Highlights/>
       </Element>
+
       <Element name="pricing">
         <Pricing/>
       </Element>
+      
       <Element name="location">
         <Location/>
       </Element>

@@ -43,7 +43,7 @@ const TimeUntil = ()=>{
     },[])
 
     useEffect(()=>{
-        setInterval(()=>getTimeUntil('  20 Aug 2024, 01:20:00 GMT '),1000) 
+        setInterval(()=>getTimeUntil('  20 Sep 2024, 01:20:00 GMT '),1000) 
     },[getTimeUntil])
     
     return(

@@ -38,10 +38,8 @@ const Discount =()=>{
                 </Fade>
                 <Slide right={true}>
                     <div className="discount_description">
-                        <h3>Purchase Tickets Before 20th opf june</h3>
-                        <p>
-                            lorem
-                        </p>
+                        <h3>Buy Tickets Before The Harvest Festival</h3>
+                  
                         <MyButton
                             text = "Purchase Tickets"
                             link="http://google.com"

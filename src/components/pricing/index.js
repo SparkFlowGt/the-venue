@@ -4,12 +4,12 @@ import { Zoom } from "react-awesome-reveal";
 const Pricing=()=>{
 
     const priceState={
-        price:[100,150,200],
+        price:[100,150,350],
         position:['Ecthelion',' Merethrond','Othram'],
         desc:[
-            'Lorem',
-            'Lorem',
-            'Lorem'
+            'Access to the concert in the grand courtyard of the White City.',
+            'Priority seating and a complimentary drink in addition to access to the concert.',
+            'Meet-and-greet with Gandalf and his band, a special souvenir, access to a private lounge area, and all benefits of the Merethrond tier.'
         ],
         linkto:['http://sales.b','http://sales/m','http://sales.s'],
         delay:[500,0,500]
